@@ -9,6 +9,9 @@ Or a website that runs PHP programs. PHP is very common with service providers.
 
 Note, this sample is a variation of the [Video Quickstart PHP](https://github.com/kedartoraskar/video-quickstart-php) GitHub project.
 
+Twilio tutorials to set up the generation of access tokens:
+[https://www.twilio.com/docs/video/tutorials/user-identity-access-tokens](https://www.twilio.com/docs/video/tutorials/user-identity-access-tokens)
+
 Screen print:
 
 <img width="600px"  src="TwilioVideo.jpg"/>
@@ -33,6 +36,12 @@ Heroku Hosting Service
 - [composer.json](composer.json) : Heroku deployment file which sets the programming language used.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/tigerfarm/owlvideo)
+
+After deployment to Heroku, go to the Heroku project's Settings. Click Reveal Config Vars. Add variable, name: TOKEN_HOST, value: the host that generates your access tokens, example: your Twilio Functions domain name: about-time-1235.twil.io. TOKEN_HOST is used in [getToken.php](getToken.php). You can view the complete access token request URL in [getToken.php](getToken.php).
+
+Graphic with the steps to establish a video session between 2 people:
+
+<img width="600px"  src="TwilioVideoFlow.jpg"/>
 
 ## Implementation
 
@@ -93,9 +102,9 @@ In Twilio Console, go to:
 1. Click the Create Function icon (circle with plus sign in the middle).
 2. Click Blank. Click Create.
    - Properties, Function Name: Generate Video Access Token
-   - URL: https://about-time-6360.twil.io /tokenvideo
+   - URL: https://about-time-6360.twil.io /generateVideoToken
    - Uncheck Configuration, Access Control to allow Twilio JS Client access.
-   - Copy and paste the contents of [tokenvideo.js](tokenvideo.js) into the Code box.
+   - Copy and paste the contents of [generateVideoToken.js](generateVideoToken.js) into the Code box.
 3. Click Save.
 
 ### <a name="bullet4"></a>Create an API key and secret key string
@@ -134,7 +143,7 @@ Create Function Environment Variables.
 
 Test by generating an access token in your browser (Use your own Twilio Function domain):
 
-    https://about-time-1235.twil.io/tokenVideo
+    https://about-time-1235.twil.io/generateVideoToken
 
 Example response (note this is not actual token):
 
