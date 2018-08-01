@@ -46,10 +46,6 @@ TOKEN_HOST, value: the host that generates your access tokens
 Example TOKEN_HOST value: your Twilio Functions domain name: about-time-1235.twil.io. TOKEN_HOST is used in [getToken.php](getToken.php).
 You can view the complete access token request URL in [getToken.php](getToken.php).
 
-Graphic with the steps to establish a video session between 2 people:
-
-<img width="600px"  src="TwilioVideoFlow.jpg"/>
-
 ## Implementation
 
 The server side can run locally on a computer using NodeJS, or run on a website that runs PHP programs.
@@ -60,6 +56,10 @@ The server side can run locally on a computer using NodeJS, or run on a website 
 4. [Create API Key and secret key string](#bullet4)
 5. [Twilio Function Configuration](#bullet5)
 6. [Testing](#bullet6)
+
+Graphic with the steps to establish a video session between 2 people:
+
+<img width="600px"  src="TwilioVideoFlow.jpg"/>
 
 ### <a name="bullet1"></a>Local Server Side Setup using a NodeJS Webserver
 
