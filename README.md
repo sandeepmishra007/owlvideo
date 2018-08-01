@@ -37,7 +37,14 @@ Heroku Hosting Service
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/tigerfarm/owlvideo)
 
-After deployment to Heroku, go to the Heroku project's Settings. Click Reveal Config Vars. Add variable, name: TOKEN_HOST, value: the host that generates your access tokens, example: your Twilio Functions domain name: about-time-1235.twil.io. TOKEN_HOST is used in [getToken.php](getToken.php). You can view the complete access token request URL in [getToken.php](getToken.php).
+After deployment to Heroku, go to the Heroku project's Settings.
+Click Reveal Config Vars.
+Add variable, name:
+````
+TOKEN_HOST, value: the host that generates your access tokens
+````
+Example TOKEN_HOST value: your Twilio Functions domain name: about-time-1235.twil.io. TOKEN_HOST is used in [getToken.php](getToken.php).
+You can view the complete access token request URL in [getToken.php](getToken.php).
 
 Graphic with the steps to establish a video session between 2 people:
 
