@@ -46,7 +46,7 @@
             function roomJoined(room) {
                 window.room = activeRoom = room;
                 log("Joined as: " + clientId);
-                
+                log("+ activeRoom join: " + activeRoom);
                 
                 document.getElementById('button-join').style.display = 'none';
                 document.getElementById('button-leave').style.display = 'inline';
@@ -122,6 +122,7 @@
                 $.get("getToken.php?clientid=" + clientId + paramRoom + tokenHost, function (gotToken) {
                     theToken = gotToken.trim();
                     log("Token refreshed.");
+                    log("theToken: " + theToken);
                     tokenClientId = clientId;
                 })
                         // .done(function () {alert("getToken + " + theToken);})

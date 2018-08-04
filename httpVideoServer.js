@@ -27,7 +27,7 @@ http.createServer(function (request, response) {
             theParam = request.url.substring(request.url.indexOf("?"));
             console.log("+ theParam :" + theParam + ":");
             //
-            tokenHost = "about-time-1235.twil.io";
+            tokenHost = "obedient-machine-3163.twil.io";
             theHostnameFieldname = "&tokenhost=";
             var theIndex = request.url.indexOf(theHostnameFieldname);
             if (theIndex > 0) {
@@ -39,7 +39,8 @@ http.createServer(function (request, response) {
                 theResponseStatusCode = theResponse && theResponse.statusCode;
                 if (theResponseStatusCode === 200) {
                     theToken = theText;
-                    // console.log('+ theToken:', theToken);
+                    // for testing: theToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTS2U4ZWI2MjA1NDJhYWY2N2YzNGZiMmYxYTdjMzkyNjgwLTE1MjI5NDg1MTgiLCJpc3MiOiJTS2U4ZWI2MjA1NDJhYWY2N2YzNGZiMmYxYTdjMzkyNjgwIiwic3ViIjoiQUNhZTM2MzY4MTNlMWNiMzdiNzQ1YmM2YjEzZTYzNmMyOCIsImV4cCI6MTUyMjk1MjExOCwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiMTMyMDQ0NDYiLCJ2aWRlbyI6eyJyb29tIjoiSW5jZG50XzY2In19fQ.PRCyyGanx13WCsu6p8I00MfNdP_jQPzFeqbwAnY_f2E";
+                    console.log('+ theToken:', theToken);
                     response.writeHead(200);
                     response.write(theToken, "binary");
                     response.end();
